@@ -1,86 +1,115 @@
-# Electric Vehicle Dashboard
+# ⚡ Electric Vehicle Dashboard
 
-## Project Overview
+An interactive **Tableau dashboard** for exploring electric vehicle registrations by model year, state, manufacturer, vehicle type, model, and CAFV eligibility.
 
-An interactive Tableau dashboard analyzing electric vehicle adoption across the United States.
+> **[🔗 View Interactive Dashboard on Tableau Public](https://public.tableau.com/app/profile/bhaskar.nakka4980/viz/EVDashboard_17866424745700/EvDashboard)**
 
-The dashboard explores EV registrations by model year, state, manufacturer, vehicle model, electric vehicle type, and Clean Alternative Fuel Vehicle (CAFV) eligibility.
+![Electric Vehicle Dashboard](images/Ev%20Dashboard.png)
 
-## Business Objective
+---
 
-The objective of this dashboard is to provide an interactive view of the electric vehicle landscape and help users understand:
+## 📊 Project Overview
 
-* How EV adoption has changed over time
-* Which states have the highest number of registered EVs
-* Which manufacturers dominate the EV market
-* The distribution of Battery Electric Vehicles (BEVs) and Plug-in Hybrid Electric Vehicles (PHEVs)
-* CAFV eligibility across registered vehicles
-* Which vehicle models have the highest number of registrations
+This project analyzes electric vehicle registration data using Tableau to identify patterns across:
 
-## Key KPIs
+* Vehicle adoption by model year
+* Geographic distribution by state
+* Leading EV manufacturers
+* BEV vs PHEV distribution
+* CAFV eligibility
+* Vehicle model-level registrations
 
-| KPI                    |       Value |
-| ---------------------- | ----------: |
-| Total Vehicles         |     150,413 |
-| Average Electric Range | 67.83 miles |
-| Total BEV Vehicles     |     116,745 |
-| Total PHEV Vehicles    |      33,668 |
+The dashboard is designed to allow users to explore the data interactively rather than relying on static charts.
 
-## Dashboard Features
+---
 
-### Vehicle Adoption Trend
+## 🎯 Business Objective
 
-The dashboard shows the number of registered electric vehicles by model year, allowing users to explore changes in EV adoption over time.
+The goal of the dashboard is to provide a clear and interactive view of the EV population and help answer questions such as:
 
-### Geographic Analysis
+* How has EV registration changed across model years?
+* Which states contain the most vehicles in the dataset?
+* Which manufacturers account for the largest share of registrations?
+* How are BEVs and PHEVs distributed?
+* What proportion of vehicles falls into each CAFV eligibility category?
+* Which vehicle models have the highest number of registrations?
 
-A state-level map shows the distribution of registered electric vehicles across the United States.
+---
 
-### Manufacturer Analysis
+## 🔑 Key Performance Indicators
 
-The Top 10 manufacturers visualization highlights the manufacturers with the largest share of registered vehicles.
+| KPI                    |           Value |
+| ---------------------- | --------------: |
+| Total Vehicles         |     **150,413** |
+| Average Electric Range | **67.83 miles** |
+| Total BEV Vehicles     |     **116,745** |
+| Total PHEV Vehicles    |      **33,668** |
 
-### EV Type Analysis
+---
 
-The dashboard compares:
+## 📈 Dashboard Components
 
-* Battery Electric Vehicles (BEV)
-* Plug-in Hybrid Electric Vehicles (PHEV)
+### 1. Vehicle Registrations by Model Year
 
-### CAFV Eligibility Analysis
+A trend chart shows the number of registered vehicles across model years, allowing users to examine how registrations change over time.
 
-The dashboard provides a breakdown of vehicles based on Clean Alternative Fuel Vehicle eligibility.
+### 2. Geographic Distribution
 
-### Vehicle Model Analysis
+A U.S. map displays vehicle registrations by state, providing a geographic view of the dataset.
 
-A detailed table provides model-level information including manufacturer, EV type, vehicle count, and percentage contribution.
+### 3. Top 10 Manufacturers
 
-## Interactive Filters
+A ranked bar chart highlights the manufacturers with the highest number of registered vehicles.
 
-Users can filter the dashboard using:
+### 4. CAFV Eligibility
 
-* CAFV Eligibility
-* EV Type
+A donut chart breaks down vehicles according to Clean Alternative Fuel Vehicle (CAFV) eligibility.
+
+### 5. Vehicle Model Analysis
+
+A detailed table provides model-level information including:
+
 * Model
-* State
+* Manufacturer
+* EV type
+* Total vehicles
+* Percentage of total vehicles
 
-These filters allow users to drill down into specific segments of the EV market.
+---
 
-## Tools & Technologies
+## 🎛️ Interactive Filters
 
-* Tableau
-* Data Visualization
-* Data Analysis
-* CSV Dataset
+Users can dynamically filter the dashboard using:
 
-## Dataset
+* **CAFV Eligibility**
+* **EV Type**
+* **Model**
+* **State**
 
-The analysis uses the Electric Vehicle Population dataset containing vehicle-level information such as:
+The dashboard also supports hover-based exploration of charts and map data.
+
+---
+
+## 💡 Key Observations
+
+Based on the dashboard:
+
+* **BEVs represent the majority of vehicles**, with 116,745 registrations compared with 33,668 PHEVs.
+* **Tesla has the largest manufacturer share** in the displayed dataset, accounting for more than half of the vehicles shown in the Top 10 manufacturer analysis.
+* Vehicle registrations increase substantially across the later model years, with the highest point occurring around the 2023 model year in the displayed trend.
+* The dataset is **strongly concentrated in Washington State**, so geographic findings should be interpreted as characteristics of this dataset rather than as a complete representation of nationwide EV adoption.
+
+---
+
+## 🗂️ Dataset
+
+The project uses an electric vehicle population dataset containing vehicle-level attributes such as:
 
 * VIN
 * County
 * City
 * State
+* Postal Code
 * Model Year
 * Make
 * Model
@@ -88,16 +117,25 @@ The analysis uses the Electric Vehicle Population dataset containing vehicle-lev
 * CAFV Eligibility
 * Electric Range
 * Base MSRP
-* Electric Utility
+* Legislative District
 * Vehicle Location
+* Electric Utility
+* Census Tract
 
-The dataset is included in this repository for reproducibility.
+The original CSV is included in the repository for reproducibility.
 
-## Dashboard Preview
+---
 
-![Electric Vehicle Dashboard](images/Ev%20Dashboard.png)
+## 🛠️ Tools & Technologies
 
-## Project Structure
+* **Tableau** — Dashboard development and data visualization
+* **CSV** — Data source
+* **Git** — Version control
+* **GitHub** — Project hosting and portfolio presentation
+
+---
+
+## 📁 Repository Structure
 
 ```text
 EV Dashboard/
@@ -115,19 +153,32 @@ EV Dashboard/
 └── README.md
 ```
 
-## Tableau Dashboard
+---
 
-The interactive dashboard is available on Tableau Public.
+## ⚠️ Data Scope & Limitations
 
-**Tableau Public:** [View Interactive Dashboard](https://public.tableau.com/app/profile/bhaskar.nakka4980/viz/EVDashboard_17866424745700/EvDashboard)
+This dashboard should not be interpreted as a complete statistical representation of the U.S. electric vehicle market.
 
-## Key Takeaways
+The dataset has a strong geographic concentration, particularly in Washington State. Therefore:
 
-The dashboard provides an interactive way to examine EV adoption patterns across time, geography, manufacturers, vehicle types, and individual models.
+* State comparisons should be interpreted within the dataset's coverage.
+* Registration counts should not automatically be treated as total EV sales.
+* The analysis describes the available dataset rather than the entire U.S. EV population.
+* Dashboard results depend on the completeness and accuracy of the underlying dataset.
 
-The analysis shows a strong concentration of registrations among a small number of major manufacturers and provides a clear view of the relative distribution between BEVs and PHEVs.
+---
 
-## Author
+## 🔗 Project Links
+
+**Interactive Tableau Dashboard:**
+[View on Tableau Public](https://public.tableau.com/app/profile/bhaskar.nakka4980/viz/EVDashboard_17866424745700/EvDashboard)
+
+**GitHub Repository:**
+[View Source Files on GitHub](https://github.com/bhaskar-nb/ev-dashboard)
+
+---
+
+## 👤 Author
 
 **Bhaskar**
 
